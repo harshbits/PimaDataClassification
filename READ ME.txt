@@ -1,0 +1,112 @@
+Name: Harsh Hiteshkumar Bhavsar
+Net ID: hhb140330
+===========================================================
+
+
+Problem 1:
+
+Run File using command prompt: 
+================================
+
+Rscript Part1.R https://archive.ics.uci.edu/ml/machine-learning-databases/pima-indians-diabetes/pima-indians-diabetes.data
+
+
+Part-1
+==========
+-> Based on the Rplot.pdf (in Problem 1 Directory) file contains in the Problem1 directory, I came to conclusion that not all attributes are normally distributed.
+-> As per the above statement, not all are the normally distributed, but there are some which are closely normally distributed. I have listed those attributes below.
+
+	1) P-G concentration
+	2) Diastolic B.P.
+	3) BMI
+
+Part-2:
+==========
+-> This attributes has a strong co-relation with the output(class) variable:
+	1) V2, i.e. Plasma glucose concentration a 2 hours in an oral glucose tolerance test
+
+
+Part-3:
+==========
+-> These 2 attributes are closely related to each other based on output:
+	1) V1, i.e. Number of times pregnant
+	2) V8, i.e. Age (years)
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+Problem 2:
+
+Run File using command prompt: 
+================================
+
+Rscript Part2-NaiveBayes.R https://archive.ics.uci.edu/ml/machine-learning-databases/pima-indians-diabetes/pima-indians-diabetes.data
+
+R-Package Used:
+=================
+-> library("e1071")
+
+Part 1: Approach Taken
+========================
+-> Above mentioned R library has following function to computer Naive Bayesian Method, which is best suitable method to compute Naive Bayesian.
+	=> model <- naiveBayes(V9 ~ ., PimaData = training)
+
+
+Part 2: 
+==========
+-> I have used sample function of R as random number generator and split the data.
+
+
+Part 3:
+==========
+-> The table will be generated based on output in console/Command Prompt.
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Problem 3:
+
+
+Run File using command prompt: 
+================================
+
+Rscript Part3-SVM.R https://archive.ics.uci.edu/ml/machine-learning-databases/pima-indians-diabetes/pima-indians-diabetes.data
+
+Part 1: Default Kernel
+=======================
+-> By Default it will take Radial as a kernel. Once you will run the file, it will display the output at the end.
+
+
+Part 2:
+==========
+-> Using all kernel I have generated the data, table will print in the Console/Command Prompt.
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Problem 4:
+
+R-Package Used:
+=================
+-> library("class"), for KNN
+
+Run File using command prompt: 
+================================
+
+Rscript Part4-KNN.R https://archive.ics.uci.edu/ml/machine-learning-databases/pima-indians-diabetes/pima-indians-diabetes.data
+
+
+-> Using above command the output table will generated in Consolt/Command prompt as asked in question.
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+					Which	method	works	the	best	for	Pima Data?
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+=> Based on all the output, In my view both SVM and KNN seems to be pretty reasonable. In SVM it has almost the same accuracy all the time except sigmoid. SVM worked pretty well compare to others with higher accuracy and it will work on large dataset as well. 
+=> In order to achieve higher accuracy in KNN, we have to higher value of K, but if we will use higher value of k, the performance time will increase, hence it will take more time, which is not optimum.
+=> So in my view, compare to other 2, Naive Bayesian and KNN, SVM is best for the PIMA dataset.
+
